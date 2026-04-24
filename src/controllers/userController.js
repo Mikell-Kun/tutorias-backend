@@ -42,3 +42,63 @@ export const getContactosDisponibles = async (req, res) => {
         res.status(500).json({ message: "Error recuperando contactos", error: error.message });
     }
 };
+
+export const updateUserById = async (req, res) => {
+    const { id } = req.params;
+    const { rol, ...updateData } = req.body;
+
+    try {
+        let updateQuery = '';
+        const params = [];
+
+        // Protegemos campos sensibles
+        delete updateData.estatus;
+        delete updateData.n_control;
+        delete updateData.id_tutor;
+
+        const contrasena = updateData.contrasena;
+        delete updateData.contrasena;
+
+        const fields = Object.keys(updateData);
+        let updatedProfile = true;
+
+        if (fields.length > 0) {
+            const setClause = fields.map(field => `${field} = ?`).join(', ');
+            fields.forEach(field => params.push(updateData[field]));
+            params.push(id);
+
+            if (rol === 'estudiante') {
+                updateQuery = `UPDATE estudiantes SET ${setClause} WHERE n_control = ?`;
+            } else if (rol === 'docente') {
+                updateQuery = `UPDATE docentes SET ${setClause} WHERE n_control = ?`;
+            } else if (rol === 'tutor') {
+                updateQuery = `UPDATE tutores SET ${setClause} WHERE id_tutor = ?`;
+            } else {
+                 return res.status(400).json({ message: "Rol inválido" });
+            }
+
+            const [result] = await db.query(updateQuery, params);
+            if (result.affectedRows === 0 && !contrasena) {
+                return res.status(404).json({ message: "Usuario no encontrado" });
+            }
+        }
+
+        if (contrasena) {
+            let authQuery = '';
+            if (rol === 'estudiante') {
+                authQuery = `UPDATE estudiantes_auth SET contrasena = ? WHERE n_control = ?`;
+            } else if (rol === 'docente') {
+                authQuery = `UPDATE docentes_auth SET contrasena = ? WHERE n_control = ?`;
+            } else if (rol === 'tutor') {
+                authQuery = `UPDATE tutores_auth SET contrasena = ? WHERE id_tutor = ?`;
+            }
+            if(authQuery) {
+                await db.query(authQuery, [contrasena, id]);
+            }
+        }
+
+        res.json({ message: "Perfil actualizado exitosamente" });
+    } catch (error) {
+        res.status(500).json({ message: "Error interno del servidor", error: error.message });
+    }
+};

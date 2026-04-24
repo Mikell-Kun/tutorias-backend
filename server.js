@@ -24,20 +24,37 @@ app.use('/api/usuarios', userRoutes);
 app.use('/api/mensajes', mensajesRoutes);
 app.use('/api/incidencias', incidenciasRoutes);
 
-// Endpoints básicos de prueba
-app.get('/api/test-db', async (req, res) => {
-    try {
-        const [rows] = await db.query('SELECT 1 + 1 AS resultado');
-        res.json({ message: 'Conexión exitosa a MySQL', data: rows });
-    } catch (error) {
-        console.error("Error conectando a la BD:", error);
-        res.status(500).json({ message: 'Error conectando a la base de datos', error: error.message });
-    }
-});
-
+// Endpoints básicos (Listados Generales)
 app.get('/api/estudiantes', async (req, res) => {
     try {
         const [rows] = await db.query('SELECT * FROM estudiantes');
+        res.json(rows);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+app.get('/api/docentes', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT * FROM docentes');
+        res.json(rows);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+app.get('/api/tutores', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT * FROM tutores');
+        res.json(rows);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
+app.get('/api/materias', async (req, res) => {
+    try {
+        const [rows] = await db.query('SELECT * FROM materias');
         res.json(rows);
     } catch (error) {
         res.status(500).json({ error: error.message });
