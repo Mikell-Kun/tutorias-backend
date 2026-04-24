@@ -110,16 +110,16 @@ INSERT IGNORE INTO docentes_auth (n_control, contrasena) VALUES
 
 -- Insertar Docentes
 INSERT IGNORE INTO docentes (n_control, nombre_completo, departamento, correo, telefono) VALUES
-(20000001, 'Docente 1', 'Sistemas', 'docente1@itm.mx', '686-201'), (20000002, 'Docente 2', 'Sistemas', 'docente2@itm.mx', '686-202'),
-(20000003, 'Docente 3', 'Sistemas', 'docente3@itm.mx', '686-203'), (20000004, 'Docente 4', 'Sistemas', 'docente4@itm.mx', '686-204'),
-(20000005, 'Docente 5', 'Sistemas', 'docente5@itm.mx', '686-205'), (20000006, 'Docente 6', 'Sistemas', 'docente6@itm.mx', '686-206'),
-(20000007, 'Docente 7', 'Sistemas', 'docente7@itm.mx', '686-207'), (20000008, 'Docente 8', 'Sistemas', 'docente8@itm.mx', '686-208'),
-(20000009, 'Docente 9', 'Sistemas', 'docente9@itm.mx', '686-209'), (20000010, 'Docente 10', 'Sistemas', 'docente10@itm.mx', '686-210'),
-(20000011, 'Docente 11', 'Sistemas', 'docente11@itm.mx', '686-211'), (20000012, 'Docente 12', 'Sistemas', 'docente12@itm.mx', '686-212'),
-(20000013, 'Docente 13', 'Sistemas', 'docente13@itm.mx', '686-213'), (20000014, 'Docente 14', 'Sistemas', 'docente14@itm.mx', '686-214'),
-(20000015, 'Docente 15', 'Sistemas', 'docente15@itm.mx', '686-215'), (20000016, 'Docente 16', 'Sistemas', 'docente16@itm.mx', '686-216'),
-(20000017, 'Docente 17', 'Sistemas', 'docente17@itm.mx', '686-217'), (20000018, 'Docente 18', 'Sistemas', 'docente18@itm.mx', '686-218'),
-(20000019, 'Docente 19', 'Sistemas', 'docente19@itm.mx', '686-219'), (20000020, 'Docente 20', 'Sistemas', 'docente20@itm.mx', '686-220');
+(20000001, 'Docente 1', 'Sistemas Computacionales', 'docente1@itm.mx', '686-201'), (20000002, 'Docente 2', 'Sistemas Computacionales', 'docente2@itm.mx', '686-202'),
+(20000003, 'Docente 3', 'Sistemas Computacionales', 'docente3@itm.mx', '686-203'), (20000004, 'Docente 4', 'Sistemas Computacionales', 'docente4@itm.mx', '686-204'),
+(20000005, 'Docente 5', 'Sistemas Computacionales', 'docente5@itm.mx', '686-205'), (20000006, 'Docente 6', 'Sistemas Computacionales', 'docente6@itm.mx', '686-206'),
+(20000007, 'Docente 7', 'Sistemas Computacionales', 'docente7@itm.mx', '686-207'), (20000008, 'Docente 8', 'Sistemas Computacionales', 'docente8@itm.mx', '686-208'),
+(20000009, 'Docente 9', 'Sistemas Computacionales', 'docente9@itm.mx', '686-209'), (20000010, 'Docente 10', 'Sistemas Computacionales', 'docente10@itm.mx', '686-210'),
+(20000011, 'Docente 11', 'Sistemas Computacionales', 'docente11@itm.mx', '686-211'), (20000012, 'Docente 12', 'Sistemas Computacionales', 'docente12@itm.mx', '686-212'),
+(20000013, 'Docente 13', 'Sistemas Computacionales', 'docente13@itm.mx', '686-213'), (20000014, 'Docente 14', 'Sistemas Computacionales', 'docente14@itm.mx', '686-214'),
+(20000015, 'Docente 15', 'Sistemas Computacionales', 'docente15@itm.mx', '686-215'), (20000016, 'Docente 16', 'Sistemas Computacionales', 'docente16@itm.mx', '686-216'),
+(20000017, 'Docente 17', 'Sistemas Computacionales', 'docente17@itm.mx', '686-217'), (20000018, 'Docente 18', 'Sistemas Computacionales', 'docente18@itm.mx', '686-218'),
+(20000019, 'Docente 19', 'Sistemas Computacionales', 'docente19@itm.mx', '686-219'), (20000020, 'Docente 20', 'Sistemas Computacionales', 'docente20@itm.mx', '686-220');
 
 -- Insertar Auth Estudiantes
 INSERT IGNORE INTO estudiantes_auth (n_control, contrasena) VALUES
@@ -132,36 +132,36 @@ INSERT IGNORE INTO estudiantes_auth (n_control, contrasena) VALUES
 
 -- Insertar Estudiantes
 INSERT IGNORE INTO estudiantes (n_control, nombre_completo, fecha_nacimiento, telefono, carrera, semestre, estatus, correo, tutor_id) VALUES
-(30000001, 'estudiante1', '2000-01-01', '686-301', 'Sistemas', '1er Semestre', 'Regular', 'est1@mx', 10000001),
-(30000002, 'estudiante2', '2000-01-02', '686-302', 'Sistemas', '1er Semestre', 'Regular', 'est2@mx', 10000001),
-(30000003, 'estudiante3', '2000-01-03', '686-303', 'Sistemas', '2do Semestre', 'Regular', 'est3@mx', 10000002),
-(30000004, 'estudiante4', '2000-01-04', '686-304', 'Sistemas', '2do Semestre', 'Regular', 'est4@mx', 10000002),
-(30000005, 'estudiante5', '2000-01-05', '686-305', 'Sistemas', '3er Semestre', 'Regular', 'est5@mx', 10000003),
-(30000006, 'estudiante6', '2000-01-06', '686-306', 'Sistemas', '3er Semestre', 'Regular', 'est6@mx', 10000003),
-(30000007, 'estudiante7', '2000-01-07', '686-307', 'Sistemas', '4to Semestre', 'Regular', 'est7@mx', 10000004),
-(30000008, 'estudiante8', '2000-01-08', '686-308', 'Sistemas', '4to Semestre', 'Regular', 'est8@mx', 10000004),
-(30000009, 'estudiante9', '2000-01-09', '686-309', 'Sistemas', '5to Semestre', 'Regular', 'est9@mx', 10000005),
-(30000010, 'estudiante10', '2000-01-10', '686-310', 'Sistemas', '5to Semestre', 'Regular', 'est10@mx', 10000005),
-(30000011, 'estudiante11', '2000-01-11', '686-311', 'Sistemas', '6to Semestre', 'Regular', 'est11@mx', 10000006),
-(30000012, 'estudiante12', '2000-01-12', '686-312', 'Sistemas', '6to Semestre', 'Regular', 'est12@mx', 10000006),
-(30000013, 'estudiante13', '2000-01-13', '686-313', 'Sistemas', '7mo Semestre', 'Regular', 'est13@mx', 10000007),
-(30000014, 'estudiante14', '2000-01-14', '686-314', 'Sistemas', '7mo Semestre', 'Regular', 'est14@mx', 10000007),
-(30000015, 'estudiante15', '2000-01-15', '686-315', 'Sistemas', '8vo Semestre', 'Regular', 'est15@mx', 10000008),
-(30000016, 'estudiante16', '2000-01-16', '686-316', 'Sistemas', '8vo Semestre', 'Regular', 'est16@mx', 10000008),
-(30000017, 'estudiante17', '2000-01-17', '686-317', 'Sistemas', '9no Semestre', 'Regular', 'est17@mx', 10000009),
-(30000018, 'estudiante18', '2000-01-18', '686-318', 'Sistemas', '9no Semestre', 'Regular', 'est18@mx', 10000009),
-(30000019, 'estudiante19', '2000-01-19', '686-319', 'Sistemas', '1er Semestre', 'Regular', 'est19@mx', 10000010),
-(30000020, 'estudiante20', '2000-01-20', '686-320', 'Sistemas', '2do Semestre', 'Regular', 'est20@mx', 10000010),
-(30000021, 'estudiante21', '2000-01-21', '686-321', 'Sistemas', '3er Semestre', 'Regular', 'est21@mx', 10000011),
-(30000022, 'estudiante22', '2000-01-22', '686-322', 'Sistemas', '4to Semestre', 'Regular', 'est22@mx', 10000011),
-(30000023, 'estudiante23', '2000-01-23', '686-323', 'Sistemas', '5to Semestre', 'Regular', 'est23@mx', 10000012),
-(30000024, 'estudiante24', '2000-01-24', '686-324', 'Sistemas', '6to Semestre', 'Regular', 'est24@mx', 10000012),
-(30000025, 'estudiante25', '2000-01-25', '686-325', 'Sistemas', '7mo Semestre', 'Regular', 'est25@mx', 10000013),
-(30000026, 'estudiante26', '2000-01-26', '686-326', 'Sistemas', '8vo Semestre', 'Regular', 'est26@mx', 10000013),
-(30000027, 'estudiante27', '2000-01-27', '686-327', 'Sistemas', '9no Semestre', 'Regular', 'est27@mx', 10000014),
-(30000028, 'estudiante28', '2000-01-28', '686-328', 'Sistemas', '1er Semestre', 'Regular', 'est28@mx', 10000014),
-(30000029, 'estudiante29', '2000-01-29', '686-329', 'Sistemas', '2do Semestre', 'Regular', 'est29@mx', 10000015),
-(30000030, 'estudiante30', '2000-01-30', '686-330', 'Sistemas', '3er Semestre', 'Regular', 'est30@mx', 10000015);
+(30000001, 'estudiante1', '2000-01-01', '686-301', 'Ingeniería en Sistemas Computacionales', '1er Semestre', 'Regular', 'est1@mx', 10000001),
+(30000002, 'estudiante2', '2000-01-02', '686-302', 'Ingeniería en Sistemas Computacionales', '1er Semestre', 'Regular', 'est2@mx', 10000001),
+(30000003, 'estudiante3', '2000-01-03', '686-303', 'Ingeniería en Sistemas Computacionales', '2do Semestre', 'Regular', 'est3@mx', 10000002),
+(30000004, 'estudiante4', '2000-01-04', '686-304', 'Ingeniería en Sistemas Computacionales', '2do Semestre', 'Regular', 'est4@mx', 10000002),
+(30000005, 'estudiante5', '2000-01-05', '686-305', 'Ingeniería en Sistemas Computacionales', '3er Semestre', 'Regular', 'est5@mx', 10000003),
+(30000006, 'estudiante6', '2000-01-06', '686-306', 'Ingeniería en Sistemas Computacionales', '3er Semestre', 'Regular', 'est6@mx', 10000003),
+(30000007, 'estudiante7', '2000-01-07', '686-307', 'Ingeniería en Sistemas Computacionales', '4to Semestre', 'Regular', 'est7@mx', 10000004),
+(30000008, 'estudiante8', '2000-01-08', '686-308', 'Ingeniería en Sistemas Computacionales', '4to Semestre', 'Regular', 'est8@mx', 10000004),
+(30000009, 'estudiante9', '2000-01-09', '686-309', 'Ingeniería en Sistemas Computacionales', '5to Semestre', 'Regular', 'est9@mx', 10000005),
+(30000010, 'estudiante10', '2000-01-10', '686-310', 'Ingeniería en Sistemas Computacionales', '5to Semestre', 'Regular', 'est10@mx', 10000005),
+(30000011, 'estudiante11', '2000-01-11', '686-311', 'Ingeniería en Sistemas Computacionales', '6to Semestre', 'Regular', 'est11@mx', 10000006),
+(30000012, 'estudiante12', '2000-01-12', '686-312', 'Ingeniería en Sistemas Computacionales', '6to Semestre', 'Regular', 'est12@mx', 10000006),
+(30000013, 'estudiante13', '2000-01-13', '686-313', 'Ingeniería en Sistemas Computacionales', '7mo Semestre', 'Regular', 'est13@mx', 10000007),
+(30000014, 'estudiante14', '2000-01-14', '686-314', 'Ingeniería en Sistemas Computacionales', '7mo Semestre', 'Regular', 'est14@mx', 10000007),
+(30000015, 'estudiante15', '2000-01-15', '686-315', 'Ingeniería en Sistemas Computacionales', '8vo Semestre', 'Regular', 'est15@mx', 10000008),
+(30000016, 'estudiante16', '2000-01-16', '686-316', 'Ingeniería en Sistemas Computacionales', '8vo Semestre', 'Regular', 'est16@mx', 10000008),
+(30000017, 'estudiante17', '2000-01-17', '686-317', 'Ingeniería en Sistemas Computacionales', '9no Semestre', 'Regular', 'est17@mx', 10000009),
+(30000018, 'estudiante18', '2000-01-18', '686-318', 'Ingeniería en Sistemas Computacionales', '9no Semestre', 'Regular', 'est18@mx', 10000009),
+(30000019, 'estudiante19', '2000-01-19', '686-319', 'Ingeniería en Sistemas Computacionales', '1er Semestre', 'Regular', 'est19@mx', 10000010),
+(30000020, 'estudiante20', '2000-01-20', '686-320', 'Ingeniería en Sistemas Computacionales', '2do Semestre', 'Regular', 'est20@mx', 10000010),
+(30000021, 'estudiante21', '2000-01-21', '686-321', 'Ingeniería en Sistemas Computacionales', '3er Semestre', 'Regular', 'est21@mx', 10000011),
+(30000022, 'estudiante22', '2000-01-22', '686-322', 'Ingeniería en Sistemas Computacionales', '4to Semestre', 'Regular', 'est22@mx', 10000011),
+(30000023, 'estudiante23', '2000-01-23', '686-323', 'Ingeniería en Sistemas Computacionales', '5to Semestre', 'Regular', 'est23@mx', 10000012),
+(30000024, 'estudiante24', '2000-01-24', '686-324', 'Ingeniería en Sistemas Computacionales', '6to Semestre', 'Regular', 'est24@mx', 10000012),
+(30000025, 'estudiante25', '2000-01-25', '686-325', 'Ingeniería en Sistemas Computacionales', '7mo Semestre', 'Regular', 'est25@mx', 10000013),
+(30000026, 'estudiante26', '2000-01-26', '686-326', 'Ingeniería en Sistemas Computacionales', '8vo Semestre', 'Regular', 'est26@mx', 10000013),
+(30000027, 'estudiante27', '2000-01-27', '686-327', 'Ingeniería en Sistemas Computacionales', '9no Semestre', 'Regular', 'est27@mx', 10000014),
+(30000028, 'estudiante28', '2000-01-28', '686-328', 'Ingeniería en Sistemas Computacionales', '1er Semestre', 'Regular', 'est28@mx', 10000014),
+(30000029, 'estudiante29', '2000-01-29', '686-329', 'Ingeniería en Sistemas Computacionales', '2do Semestre', 'Regular', 'est29@mx', 10000015),
+(30000030, 'estudiante30', '2000-01-30', '686-330', 'Ingeniería en Sistemas Computacionales', '3er Semestre', 'Regular', 'est30@mx', 10000015);
 
 -- Insertar Materias (Sistemas Computacionales)
 INSERT IGNORE INTO materias (codigo, nombre, departamento) VALUES
