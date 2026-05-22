@@ -15,7 +15,8 @@ export const getMensajes = async (req, res) => {
 };
 
 export const addMensaje = async (req, res) => {
-    const { remitenteId, destinatarioId, contenido } = req.body;
+    const { remitenteId, destinatarioId, contenido, materiaCodigo, materia_codigo } = req.body;
+    const finalMateriaCodigo = materiaCodigo || materia_codigo || null;
 
     if (!remitenteId || !destinatarioId || !contenido) {
         return res.status(400).json({ message: "Faltan datos obligatorios" });
@@ -23,11 +24,11 @@ export const addMensaje = async (req, res) => {
 
     try {
         const [result] = await db.query(
-            'INSERT INTO mensajes (remitente_id, destinatario_id, contenido) VALUES (?, ?, ?)',
-            [remitenteId, destinatarioId, contenido]
+            'INSERT INTO mensajes (remitente_id, destinatario_id, contenido, materia_codigo) VALUES (?, ?, ?, ?)',
+            [remitenteId, destinatarioId, contenido, finalMateriaCodigo]
         );
         
-        // Return the newly created message
+        // Retornar el mensaje recién creado
         const [nuevoMensaje] = await db.query('SELECT * FROM mensajes WHERE id = ?', [result.insertId]);
         res.status(201).json(nuevoMensaje[0]);
     } catch (error) {

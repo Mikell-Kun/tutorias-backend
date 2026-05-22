@@ -27,7 +27,7 @@ app.use('/api/incidencias', incidenciasRoutes);
 // Endpoints básicos (Listados Generales)
 app.get('/api/estudiantes', async (req, res) => {
     try {
-        const [rows] = await db.query('SELECT * FROM estudiantes');
+        const [rows] = await db.query("SELECT *, id as n_control FROM usuarios WHERE rol = 'estudiante'");
         res.json(rows);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -36,7 +36,7 @@ app.get('/api/estudiantes', async (req, res) => {
 
 app.get('/api/docentes', async (req, res) => {
     try {
-        const [rows] = await db.query('SELECT * FROM docentes');
+        const [rows] = await db.query("SELECT *, id as n_control FROM usuarios WHERE rol = 'docente'");
         res.json(rows);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -45,7 +45,7 @@ app.get('/api/docentes', async (req, res) => {
 
 app.get('/api/tutores', async (req, res) => {
     try {
-        const [rows] = await db.query('SELECT * FROM tutores');
+        const [rows] = await db.query("SELECT *, id as id_tutor FROM usuarios WHERE rol = 'tutor'");
         res.json(rows);
     } catch (error) {
         res.status(500).json({ error: error.message });
